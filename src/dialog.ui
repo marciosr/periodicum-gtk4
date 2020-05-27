@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkWindow" id="dialog">
+    <property name="can_focus">0</property>
+
+    <property name="default_width">250</property>
+    <property name="default_height">100</property>
+    <child>
+      <object class="GtkGrid">
+        <property name="can_focus">0</property>
+        <property name="column_homogeneous">1</property>
+        <child>
+          <object class="GtkLabel">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">Name</property>
+            <property name="justify">right</property>
+            <layout>
+              <property name="left_attach">0</property>
+              <property name="top_attach">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">Symbol</property>
+            <layout>
+              <property name="left_attach">0</property>
+              <property name="top_attach">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">Atomic Number</property>
+            <layout>
+              <property name="left_attach">0</property>
+              <property name="top_attach">2</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="name">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">label</property>
+            <property name="selectable">1</property>
+            <layout>
+              <property name="left_attach">1</property>
+              <property name="top_attach">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="symbol">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">label</property>
+            <property name="selectable">1</property>
+            <layout>
+              <property name="left_attach">1</property>
+              <property name="top_attach">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="atomic_number">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">label</property>
+            <property name="selectable">1</property>
+            <layout>
+              <property name="left_attach">1</property>
+              <property name="top_attach">2</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="atomic_weigth">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">label</property>
+            <property name="selectable">1</property>
+            <layout>
+              <property name="left_attach">1</property>
+              <property name="top_attach">3</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="density">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">label</property>
+            <property name="selectable">1</property>
+            <layout>
+              <property name="left_attach">1</property>
+              <property name="top_attach">4</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="melting_point">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">label</property>
+            <property name="selectable">1</property>
+            <layout>
+              <property name="left_attach">1</property>
+              <property name="top_attach">5</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="boiling_point">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">label</property>
+            <property name="selectable">1</property>
+            <layout>
+              <property name="left_attach">1</property>
+              <property name="top_attach">6</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="atomic_radius">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">label</property>
+            <property name="selectable">1</property>
+            <layout>
+              <property name="left_attach">1</property>
+              <property name="top_attach">7</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="covalent_radius">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">label</property>
+            <property name="selectable">1</property>
+            <layout>
+              <property name="left_attach">1</property>
+              <property name="top_attach">8</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="ionic_radius">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">label</property>
+            <property name="selectable">1</property>
+            <layout>
+              <property name="left_attach">1</property>
+              <property name="top_attach">9</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="atomic_volume">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">label</property>
+            <property name="selectable">1</property>
+            <layout>
+              <property name="left_attach">1</property>
+              <property name="top_attach">10</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="specific_heat">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">label</property>
+            <property name="selectable">1</property>
+            <layout>
+              <property name="left_attach">1</property>
+              <property name="top_attach">11</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="fusion_heat">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">label</property>
+            <property name="selectable">1</property>
+            <layout>
+              <property name="left_attach">1</property>
+              <property name="top_attach">12</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="evaporation_heat">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">label</property>
+            <property name="selectable">1</property>
+            <layout>
+              <property name="left_attach">1</property>
+              <property name="top_attach">13</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="thermal_conductivity">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">label</property>
+            <property name="selectable">1</property>
+            <layout>
+              <property name="left_attach">1</property>
+              <property name="top_attach">14</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="debye_temperature">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">label</property>
+            <property name="selectable">1</property>
+            <layout>
+              <property name="left_attach">1</property>
+              <property name="top_attach">15</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="pauling_negativity_number">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">label</property>
+            <property name="selectable">1</property>
+            <layout>
+              <property name="left_attach">1</property>
+              <property name="top_attach">16</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="first_ionizing_energy">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">label</property>
+            <property name="selectable">1</property>
+            <layout>
+              <property name="left_attach">1</property>
+              <property name="top_attach">17</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="oxidation_states">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">label</property>
+            <property name="selectable">1</property>
+            <layout>
+              <property name="left_attach">1</property>
+              <property name="top_attach">18</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="eletronic_configuration">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">label</property>
+            <property name="selectable">1</property>
+            <layout>
+              <property name="left_attach">1</property>
+              <property name="top_attach">19</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lattice_structure">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">label</property>
+            <property name="selectable">1</property>
+            <layout>
+              <property name="left_attach">1</property>
+              <property name="top_attach">20</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lattice_constant">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">label</property>
+            <property name="selectable">1</property>
+            <layout>
+              <property name="left_attach">1</property>
+              <property name="top_attach">21</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lattice_ca_ratio">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">label</property>
+            <property name="selectable">1</property>
+            <layout>
+              <property name="left_attach">1</property>
+              <property name="top_attach">22</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="appearance">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">label</property>
+            <property name="selectable">1</property>
+            <layout>
+              <property name="left_attach">1</property>
+              <property name="top_attach">23</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="discovery_date">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">label</property>
+            <property name="selectable">1</property>
+            <layout>
+              <property name="left_attach">1</property>
+              <property name="top_attach">24</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="discovered_by">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">label</property>
+            <property name="selectable">1</property>
+            <layout>
+              <property name="left_attach">1</property>
+              <property name="top_attach">25</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">Atomic Weigth</property>
+            <layout>
+              <property name="left_attach">0</property>
+              <property name="top_attach">3</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">Density</property>
+            <layout>
+              <property name="left_attach">0</property>
+              <property name="top_attach">4</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">Melting Point</property>
+            <layout>
+              <property name="left_attach">0</property>
+              <property name="top_attach">5</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">Boiling Point</property>
+            <layout>
+              <property name="left_attach">0</property>
+              <property name="top_attach">6</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">Atomic Radius</property>
+            <layout>
+              <property name="left_attach">0</property>
+              <property name="top_attach">7</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">Covalent Radius</property>
+            <layout>
+              <property name="left_attach">0</property>
+              <property name="top_attach">8</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">Ionic Radius</property>
+            <layout>
+              <property name="left_attach">0</property>
+              <property name="top_attach">9</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkButton" id="bt_close">
+            <property name="label" translatable="yes">Fechar</property>
+            <property name="receives_default">1</property>
+            <property name="margin_top">5</property>
+            <layout>
+              <property name="left_attach">0</property>
+              <property name="top_attach">27</property>
+              <property name="column-span">2</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="named_after">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">label</property>
+            <layout>
+              <property name="left_attach">1</property>
+              <property name="top_attach">26</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">Atomic Volume</property>
+            <layout>
+              <property name="left_attach">0</property>
+              <property name="top_attach">10</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">Specific Heat</property>
+            <layout>
+              <property name="left_attach">0</property>
+              <property name="top_attach">11</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">Fusion Heat</property>
+            <layout>
+              <property name="left_attach">0</property>
+              <property name="top_attach">12</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">Evaporation Heat</property>
+            <layout>
+              <property name="left_attach">0</property>
+              <property name="top_attach">13</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">Thermal Conductivity</property>
+            <layout>
+              <property name="left_attach">0</property>
+              <property name="top_attach">14</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">Debye Temperature</property>
+            <layout>
+              <property name="left_attach">0</property>
+              <property name="top_attach">15</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">Pauling Negativity Number</property>
+            <layout>
+              <property name="left_attach">0</property>
+              <property name="top_attach">16</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">First Ionizing Energy</property>
+            <layout>
+              <property name="left_attach">0</property>
+              <property name="top_attach">17</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">Oxidation States</property>
+            <layout>
+              <property name="left_attach">0</property>
+              <property name="top_attach">18</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">Eletronic Configuration</property>
+            <layout>
+              <property name="left_attach">0</property>
+              <property name="top_attach">19</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">Lattice Structure</property>
+            <layout>
+              <property name="left_attach">0</property>
+              <property name="top_attach">20</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">Lattice Constant</property>
+            <layout>
+              <property name="left_attach">0</property>
+              <property name="top_attach">21</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">Lattice CA Ratio</property>
+            <layout>
+              <property name="left_attach">0</property>
+              <property name="top_attach">22</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">Appearance</property>
+            <layout>
+              <property name="left_attach">0</property>
+              <property name="top_attach">23</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">Discovery Date</property>
+            <layout>
+              <property name="left_attach">0</property>
+              <property name="top_attach">24</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">Discovered by</property>
+            <layout>
+              <property name="left_attach">0</property>
+              <property name="top_attach">25</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">Named After</property>
+            <layout>
+              <property name="left_attach">0</property>
+              <property name="top_attach">26</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child type="titlebar">
+      <object class="GtkHeaderBar" id="headerbar">
+        <property name="can_focus">0</property>
+        <property name="title" translatable="yes">Informações</property>
+        <property name="subtitle" translatable="yes">Detalhes do elemento</property>
+        <property name="show-title-buttons">1</property>
+        <child>
+          <placeholder/>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
