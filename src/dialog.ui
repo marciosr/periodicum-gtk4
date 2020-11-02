@@ -6,6 +6,17 @@
 
     <property name="default_width">250</property>
     <property name="default_height">100</property>
+    <child type="titlebar">
+      <object class="GtkHeaderBar" id="headerbar">
+        <property name="can_focus">0</property>
+        <!-- <property name="title" translatable="yes">Informações</property> -->
+        <!-- <property name="subtitle" translatable="yes">Detalhes do elemento</property> -->
+        <property name="show-title-buttons">1</property>
+        <child>
+          <placeholder/>
+        </child>
+      </object>
+    </child>
     <child>
       <object class="GtkGrid">
         <property name="can_focus">0</property>
@@ -16,8 +27,8 @@
             <property name="label" translatable="yes">Name</property>
             <property name="justify">right</property>
             <layout>
-              <property name="left_attach">0</property>
-              <property name="top_attach">0</property>
+              <property name="column">0</property>
+              <property name="row">0</property>
             </layout>
           </object>
         </child>
@@ -26,8 +37,8 @@
             <property name="can_focus">0</property>
             <property name="label" translatable="yes">Symbol</property>
             <layout>
-              <property name="left_attach">0</property>
-              <property name="top_attach">1</property>
+              <property name="column">0</property>
+              <property name="row">1</property>
             </layout>
           </object>
         </child>
@@ -36,8 +47,8 @@
             <property name="can_focus">0</property>
             <property name="label" translatable="yes">Atomic Number</property>
             <layout>
-              <property name="left_attach">0</property>
-              <property name="top_attach">2</property>
+              <property name="column">0</property>
+              <property name="row">2</property>
             </layout>
           </object>
         </child>
@@ -47,8 +58,8 @@
             <property name="label" translatable="yes">label</property>
             <property name="selectable">1</property>
             <layout>
-              <property name="left_attach">1</property>
-              <property name="top_attach">0</property>
+              <property name="column">1</property>
+              <property name="row">0</property>
             </layout>
           </object>
         </child>
@@ -58,8 +69,8 @@
             <property name="label" translatable="yes">label</property>
             <property name="selectable">1</property>
             <layout>
-              <property name="left_attach">1</property>
-              <property name="top_attach">1</property>
+              <property name="column">1</property>
+              <property name="row">1</property>
             </layout>
           </object>
         </child>
@@ -69,8 +80,8 @@
             <property name="label" translatable="yes">label</property>
             <property name="selectable">1</property>
             <layout>
-              <property name="left_attach">1</property>
-              <property name="top_attach">2</property>
+              <property name="column">1</property>
+              <property name="row">2</property>
             </layout>
           </object>
         </child>
@@ -80,8 +91,8 @@
             <property name="label" translatable="yes">label</property>
             <property name="selectable">1</property>
             <layout>
-              <property name="left_attach">1</property>
-              <property name="top_attach">3</property>
+              <property name="column">1</property>
+              <property name="row">3</property>
             </layout>
           </object>
         </child>
@@ -91,8 +102,8 @@
             <property name="label" translatable="yes">label</property>
             <property name="selectable">1</property>
             <layout>
-              <property name="left_attach">1</property>
-              <property name="top_attach">4</property>
+              <property name="column">1</property>
+              <property name="row">4</property>
             </layout>
           </object>
         </child>
@@ -102,8 +113,8 @@
             <property name="label" translatable="yes">label</property>
             <property name="selectable">1</property>
             <layout>
-              <property name="left_attach">1</property>
-              <property name="top_attach">5</property>
+              <property name="column">1</property>
+              <property name="row">5</property>
             </layout>
           </object>
         </child>
@@ -113,8 +124,8 @@
             <property name="label" translatable="yes">label</property>
             <property name="selectable">1</property>
             <layout>
-              <property name="left_attach">1</property>
-              <property name="top_attach">6</property>
+              <property name="column">1</property>
+              <property name="row">6</property>
             </layout>
           </object>
         </child>
@@ -124,8 +135,8 @@
             <property name="label" translatable="yes">label</property>
             <property name="selectable">1</property>
             <layout>
-              <property name="left_attach">1</property>
-              <property name="top_attach">7</property>
+              <property name="column">1</property>
+              <property name="row">7</property>
             </layout>
           </object>
         </child>
@@ -135,8 +146,8 @@
             <property name="label" translatable="yes">label</property>
             <property name="selectable">1</property>
             <layout>
-              <property name="left_attach">1</property>
-              <property name="top_attach">8</property>
+              <property name="column">1</property>
+              <property name="row">8</property>
             </layout>
           </object>
         </child>
@@ -146,8 +157,8 @@
             <property name="label" translatable="yes">label</property>
             <property name="selectable">1</property>
             <layout>
-              <property name="left_attach">1</property>
-              <property name="top_attach">9</property>
+              <property name="column">1</property>
+              <property name="row">9</property>
             </layout>
           </object>
         </child>
@@ -157,8 +168,8 @@
             <property name="label" translatable="yes">label</property>
             <property name="selectable">1</property>
             <layout>
-              <property name="left_attach">1</property>
-              <property name="top_attach">10</property>
+              <property name="column">1</property>
+              <property name="row">10</property>
             </layout>
           </object>
         </child>
@@ -168,8 +179,8 @@
             <property name="label" translatable="yes">label</property>
             <property name="selectable">1</property>
             <layout>
-              <property name="left_attach">1</property>
-              <property name="top_attach">11</property>
+              <property name="column">1</property>
+              <property name="row">11</property>
             </layout>
           </object>
         </child>
@@ -179,8 +190,8 @@
             <property name="label" translatable="yes">label</property>
             <property name="selectable">1</property>
             <layout>
-              <property name="left_attach">1</property>
-              <property name="top_attach">12</property>
+              <property name="column">1</property>
+              <property name="row">12</property>
             </layout>
           </object>
         </child>
@@ -190,8 +201,8 @@
             <property name="label" translatable="yes">label</property>
             <property name="selectable">1</property>
             <layout>
-              <property name="left_attach">1</property>
-              <property name="top_attach">13</property>
+              <property name="column">1</property>
+              <property name="row">13</property>
             </layout>
           </object>
         </child>
@@ -201,8 +212,8 @@
             <property name="label" translatable="yes">label</property>
             <property name="selectable">1</property>
             <layout>
-              <property name="left_attach">1</property>
-              <property name="top_attach">14</property>
+              <property name="column">1</property>
+              <property name="row">14</property>
             </layout>
           </object>
         </child>
@@ -212,8 +223,8 @@
             <property name="label" translatable="yes">label</property>
             <property name="selectable">1</property>
             <layout>
-              <property name="left_attach">1</property>
-              <property name="top_attach">15</property>
+              <property name="column">1</property>
+              <property name="row">15</property>
             </layout>
           </object>
         </child>
@@ -223,8 +234,8 @@
             <property name="label" translatable="yes">label</property>
             <property name="selectable">1</property>
             <layout>
-              <property name="left_attach">1</property>
-              <property name="top_attach">16</property>
+              <property name="column">1</property>
+              <property name="row">16</property>
             </layout>
           </object>
         </child>
@@ -234,8 +245,8 @@
             <property name="label" translatable="yes">label</property>
             <property name="selectable">1</property>
             <layout>
-              <property name="left_attach">1</property>
-              <property name="top_attach">17</property>
+              <property name="column">1</property>
+              <property name="row">17</property>
             </layout>
           </object>
         </child>
@@ -245,8 +256,8 @@
             <property name="label" translatable="yes">label</property>
             <property name="selectable">1</property>
             <layout>
-              <property name="left_attach">1</property>
-              <property name="top_attach">18</property>
+              <property name="column">1</property>
+              <property name="row">18</property>
             </layout>
           </object>
         </child>
@@ -256,8 +267,8 @@
             <property name="label" translatable="yes">label</property>
             <property name="selectable">1</property>
             <layout>
-              <property name="left_attach">1</property>
-              <property name="top_attach">19</property>
+              <property name="column">1</property>
+              <property name="row">19</property>
             </layout>
           </object>
         </child>
@@ -267,8 +278,8 @@
             <property name="label" translatable="yes">label</property>
             <property name="selectable">1</property>
             <layout>
-              <property name="left_attach">1</property>
-              <property name="top_attach">20</property>
+              <property name="column">1</property>
+              <property name="row">20</property>
             </layout>
           </object>
         </child>
@@ -278,8 +289,8 @@
             <property name="label" translatable="yes">label</property>
             <property name="selectable">1</property>
             <layout>
-              <property name="left_attach">1</property>
-              <property name="top_attach">21</property>
+              <property name="column">1</property>
+              <property name="row">21</property>
             </layout>
           </object>
         </child>
@@ -289,8 +300,8 @@
             <property name="label" translatable="yes">label</property>
             <property name="selectable">1</property>
             <layout>
-              <property name="left_attach">1</property>
-              <property name="top_attach">22</property>
+              <property name="column">1</property>
+              <property name="row">22</property>
             </layout>
           </object>
         </child>
@@ -300,8 +311,8 @@
             <property name="label" translatable="yes">label</property>
             <property name="selectable">1</property>
             <layout>
-              <property name="left_attach">1</property>
-              <property name="top_attach">23</property>
+              <property name="column">1</property>
+              <property name="row">23</property>
             </layout>
           </object>
         </child>
@@ -311,8 +322,8 @@
             <property name="label" translatable="yes">label</property>
             <property name="selectable">1</property>
             <layout>
-              <property name="left_attach">1</property>
-              <property name="top_attach">24</property>
+              <property name="column">1</property>
+              <property name="row">24</property>
             </layout>
           </object>
         </child>
@@ -322,8 +333,8 @@
             <property name="label" translatable="yes">label</property>
             <property name="selectable">1</property>
             <layout>
-              <property name="left_attach">1</property>
-              <property name="top_attach">25</property>
+              <property name="column">1</property>
+              <property name="row">25</property>
             </layout>
           </object>
         </child>
@@ -332,8 +343,8 @@
             <property name="can_focus">0</property>
             <property name="label" translatable="yes">Atomic Weigth</property>
             <layout>
-              <property name="left_attach">0</property>
-              <property name="top_attach">3</property>
+              <property name="column">0</property>
+              <property name="row">3</property>
             </layout>
           </object>
         </child>
@@ -342,8 +353,8 @@
             <property name="can_focus">0</property>
             <property name="label" translatable="yes">Density</property>
             <layout>
-              <property name="left_attach">0</property>
-              <property name="top_attach">4</property>
+              <property name="column">0</property>
+              <property name="row">4</property>
             </layout>
           </object>
         </child>
@@ -352,8 +363,8 @@
             <property name="can_focus">0</property>
             <property name="label" translatable="yes">Melting Point</property>
             <layout>
-              <property name="left_attach">0</property>
-              <property name="top_attach">5</property>
+              <property name="column">0</property>
+              <property name="row">5</property>
             </layout>
           </object>
         </child>
@@ -362,8 +373,8 @@
             <property name="can_focus">0</property>
             <property name="label" translatable="yes">Boiling Point</property>
             <layout>
-              <property name="left_attach">0</property>
-              <property name="top_attach">6</property>
+              <property name="column">0</property>
+              <property name="row">6</property>
             </layout>
           </object>
         </child>
@@ -372,8 +383,8 @@
             <property name="can_focus">0</property>
             <property name="label" translatable="yes">Atomic Radius</property>
             <layout>
-              <property name="left_attach">0</property>
-              <property name="top_attach">7</property>
+              <property name="column">0</property>
+              <property name="row">7</property>
             </layout>
           </object>
         </child>
@@ -382,8 +393,8 @@
             <property name="can_focus">0</property>
             <property name="label" translatable="yes">Covalent Radius</property>
             <layout>
-              <property name="left_attach">0</property>
-              <property name="top_attach">8</property>
+              <property name="column">0</property>
+              <property name="row">8</property>
             </layout>
           </object>
         </child>
@@ -392,8 +403,8 @@
             <property name="can_focus">0</property>
             <property name="label" translatable="yes">Ionic Radius</property>
             <layout>
-              <property name="left_attach">0</property>
-              <property name="top_attach">9</property>
+              <property name="column">0</property>
+              <property name="row">9</property>
             </layout>
           </object>
         </child>
@@ -403,8 +414,8 @@
             <property name="receives_default">1</property>
             <property name="margin_top">5</property>
             <layout>
-              <property name="left_attach">0</property>
-              <property name="top_attach">27</property>
+              <property name="column">0</property>
+              <property name="row">27</property>
               <property name="column-span">2</property>
             </layout>
           </object>
@@ -414,8 +425,8 @@
             <property name="can_focus">0</property>
             <property name="label" translatable="yes">label</property>
             <layout>
-              <property name="left_attach">1</property>
-              <property name="top_attach">26</property>
+              <property name="column">1</property>
+              <property name="row">26</property>
             </layout>
           </object>
         </child>
@@ -424,8 +435,8 @@
             <property name="can_focus">0</property>
             <property name="label" translatable="yes">Atomic Volume</property>
             <layout>
-              <property name="left_attach">0</property>
-              <property name="top_attach">10</property>
+              <property name="column">0</property>
+              <property name="row">10</property>
             </layout>
           </object>
         </child>
@@ -434,8 +445,8 @@
             <property name="can_focus">0</property>
             <property name="label" translatable="yes">Specific Heat</property>
             <layout>
-              <property name="left_attach">0</property>
-              <property name="top_attach">11</property>
+              <property name="column">0</property>
+              <property name="row">11</property>
             </layout>
           </object>
         </child>
@@ -444,8 +455,8 @@
             <property name="can_focus">0</property>
             <property name="label" translatable="yes">Fusion Heat</property>
             <layout>
-              <property name="left_attach">0</property>
-              <property name="top_attach">12</property>
+              <property name="column">0</property>
+              <property name="row">12</property>
             </layout>
           </object>
         </child>
@@ -454,8 +465,8 @@
             <property name="can_focus">0</property>
             <property name="label" translatable="yes">Evaporation Heat</property>
             <layout>
-              <property name="left_attach">0</property>
-              <property name="top_attach">13</property>
+              <property name="column">0</property>
+              <property name="row">13</property>
             </layout>
           </object>
         </child>
@@ -464,8 +475,8 @@
             <property name="can_focus">0</property>
             <property name="label" translatable="yes">Thermal Conductivity</property>
             <layout>
-              <property name="left_attach">0</property>
-              <property name="top_attach">14</property>
+              <property name="column">0</property>
+              <property name="row">14</property>
             </layout>
           </object>
         </child>
@@ -474,8 +485,8 @@
             <property name="can_focus">0</property>
             <property name="label" translatable="yes">Debye Temperature</property>
             <layout>
-              <property name="left_attach">0</property>
-              <property name="top_attach">15</property>
+              <property name="column">0</property>
+              <property name="row">15</property>
             </layout>
           </object>
         </child>
@@ -484,8 +495,8 @@
             <property name="can_focus">0</property>
             <property name="label" translatable="yes">Pauling Negativity Number</property>
             <layout>
-              <property name="left_attach">0</property>
-              <property name="top_attach">16</property>
+              <property name="column">0</property>
+              <property name="row">16</property>
             </layout>
           </object>
         </child>
@@ -494,8 +505,8 @@
             <property name="can_focus">0</property>
             <property name="label" translatable="yes">First Ionizing Energy</property>
             <layout>
-              <property name="left_attach">0</property>
-              <property name="top_attach">17</property>
+              <property name="column">0</property>
+              <property name="row">17</property>
             </layout>
           </object>
         </child>
@@ -504,8 +515,8 @@
             <property name="can_focus">0</property>
             <property name="label" translatable="yes">Oxidation States</property>
             <layout>
-              <property name="left_attach">0</property>
-              <property name="top_attach">18</property>
+              <property name="column">0</property>
+              <property name="row">18</property>
             </layout>
           </object>
         </child>
@@ -514,8 +525,8 @@
             <property name="can_focus">0</property>
             <property name="label" translatable="yes">Eletronic Configuration</property>
             <layout>
-              <property name="left_attach">0</property>
-              <property name="top_attach">19</property>
+              <property name="column">0</property>
+              <property name="row">19</property>
             </layout>
           </object>
         </child>
@@ -524,8 +535,8 @@
             <property name="can_focus">0</property>
             <property name="label" translatable="yes">Lattice Structure</property>
             <layout>
-              <property name="left_attach">0</property>
-              <property name="top_attach">20</property>
+              <property name="column">0</property>
+              <property name="row">20</property>
             </layout>
           </object>
         </child>
@@ -534,8 +545,8 @@
             <property name="can_focus">0</property>
             <property name="label" translatable="yes">Lattice Constant</property>
             <layout>
-              <property name="left_attach">0</property>
-              <property name="top_attach">21</property>
+              <property name="column">0</property>
+              <property name="row">21</property>
             </layout>
           </object>
         </child>
@@ -544,8 +555,8 @@
             <property name="can_focus">0</property>
             <property name="label" translatable="yes">Lattice CA Ratio</property>
             <layout>
-              <property name="left_attach">0</property>
-              <property name="top_attach">22</property>
+              <property name="column">0</property>
+              <property name="row">22</property>
             </layout>
           </object>
         </child>
@@ -554,8 +565,8 @@
             <property name="can_focus">0</property>
             <property name="label" translatable="yes">Appearance</property>
             <layout>
-              <property name="left_attach">0</property>
-              <property name="top_attach">23</property>
+              <property name="column">0</property>
+              <property name="row">23</property>
             </layout>
           </object>
         </child>
@@ -564,8 +575,8 @@
             <property name="can_focus">0</property>
             <property name="label" translatable="yes">Discovery Date</property>
             <layout>
-              <property name="left_attach">0</property>
-              <property name="top_attach">24</property>
+              <property name="column">0</property>
+              <property name="row">24</property>
             </layout>
           </object>
         </child>
@@ -574,8 +585,8 @@
             <property name="can_focus">0</property>
             <property name="label" translatable="yes">Discovered by</property>
             <layout>
-              <property name="left_attach">0</property>
-              <property name="top_attach">25</property>
+              <property name="column">0</property>
+              <property name="row">25</property>
             </layout>
           </object>
         </child>
@@ -584,23 +595,13 @@
             <property name="can_focus">0</property>
             <property name="label" translatable="yes">Named After</property>
             <layout>
-              <property name="left_attach">0</property>
-              <property name="top_attach">26</property>
+              <property name="column">0</property>
+              <property name="row">26</property>
             </layout>
           </object>
         </child>
       </object>
     </child>
-    <child type="titlebar">
-      <object class="GtkHeaderBar" id="headerbar">
-        <property name="can_focus">0</property>
-        <property name="title" translatable="yes">Informações</property>
-        <property name="subtitle" translatable="yes">Detalhes do elemento</property>
-        <property name="show-title-buttons">1</property>
-        <child>
-          <placeholder/>
-        </child>
-      </object>
-    </child>
   </object>
 </interface>
+

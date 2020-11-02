@@ -11,9 +11,9 @@ git = "https://github.com/gtk-rs/gio"
 [dependencies.glib]
 git = "https://github.com/gtk-rs/glib"
 
-# [dependencies.gdk]
-# package = "gdk4"
-# gdk = { git = "https://github.com/gtk-rs/gdk4", rev = "85bfeba" }
+[dependencies.gdk]
+package = "gdk4"
+git = "https://github.com/gtk-rs/gdk4"
 
 [dependencies.gtk]
 package = "gtk4"

@@ -1,6 +1,6 @@
 extern crate gtk;
 extern crate gio;
-extern crate gdk;
+//extern crate gdk;
 // use std::fs::File;
 use std::{fs, fs::File};
 use std::io::prelude::*;
@@ -34,11 +34,11 @@ macro_rules! build_widget {
 		gtk::prelude::WidgetExtManual::set_name(&lb_aw,"atomic_weight");
 		let boxe: gtk::Box = gtk::Box::new(gtk::Orientation::Vertical, 1);
 
-		boxe.add(&lb_an);
-		boxe.add(&lb_sy);
-		boxe.add(&lb_aw);
+		boxe.append(&lb_an);
+		boxe.append(&lb_sy);
+		boxe.append(&lb_aw);
 
-		$name.add(&boxe);
+		$name.set_child(Some(&boxe));
 
 		match emto.atomic_number {
 			1 | 6 | 7 | 8 | 15 | 16 | 34 => gtk::prelude::WidgetExtManual::set_name(&$name,"nm"),
@@ -260,7 +260,7 @@ impl ElementDialog {
 	pub fn new() -> Rc<Self> {
 
 		let glade_src = include_str!("dialog.ui");
-		let builder = Builder::new_from_string(glade_src);
+		let builder = Builder::from_string(glade_src);
 
 		get_widget!(builder, Window, dialog);
 		get_widget!(builder, HeaderBar, headerbar);
@@ -295,7 +295,7 @@ impl ElementDialog {
 
 		let dialog_clone = dialog.clone();
 		dialog.connect_close_request(move |_|{
-			dialog_clone.remove(&dialog_clone);
+			dialog_clone.destroy();
 			glib::signal::Inhibit(false)
 		});
 
@@ -346,7 +346,8 @@ impl ElementDialog {
 		self.discovery_date.set_label(element.discovery_date.as_str());
 		self.discovered_by.set_label(element.discovered_by.as_str());
 		self.named_after.set_label(element.named_after.as_str());
-		self.headerbar.set_title(Some(element.name.as_str()));
+		// self.headerbar.set_title_widget(Some(element.name.as_str()));
+		// self.headerbar.set_title_widget(None);
 
 		self.dialog.show();
 	}
@@ -356,7 +357,7 @@ impl ElementDialog {
 fn on_activate(application: &gtk::Application) {
 
 	let glade_src = include_str!("window.ui");
-	let builder = Builder::new_from_string(glade_src);
+	let builder = Builder::from_string(glade_src);
 
 	get_widget!(builder, ApplicationWindow, window);
 	get_widget!(builder, Grid, grid);
@@ -383,16 +384,16 @@ fn main() {
 
 	application.connect_activate(|app| {
 
-	// let provider = gtk::CssProvider::new();
-	// provider
-	// 	.load_from_data(STYLE.as_bytes());
+	let provider = gtk::CssProvider::new();
+	provider
+		.load_from_data(STYLE.as_bytes());
 		//.expect("Failed to load CSS");
 
-	// gtk::StyleContext::add_provider_for_display(
-	// 	&gdk::Display::get_default().expect("Error initializing gtk css provider."),
-	// 	&provider,
-	// 	gtk::STYLE_PROVIDER_PRIORITY_APPLICATION,
-	// );
+	gtk::StyleContext::add_provider_for_display(
+		&gdk::Display::get_default().expect("Error initializing gtk css provider."),
+		&provider,
+		gtk::STYLE_PROVIDER_PRIORITY_APPLICATION,
+	);
 
 
 	on_activate(app);
