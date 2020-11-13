@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
  	<object class="GtkApplicationWindow" id="window">
-		<property name="title">Grid</property>
+		<property name="title">Periodicum GTK4</property>
 
  		<child type="titlebar">
 			<object class="GtkHeaderBar" id="headerBar">
