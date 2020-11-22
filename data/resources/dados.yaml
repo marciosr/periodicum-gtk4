@@ -1,6 +1,4 @@
-pub fn make_table () -> &'static str {
-	let s =
-	r#"---
+---
 - name: Hydrogen
   symbol: H
   atomic_number: 1
@@ -6844,6 +6842,4 @@ pub fn make_table () -> &'static str {
   discovered_by: Dubna/Livermore
   named_after: Un (one) un (one) octium (eight)
   pos_x: 17
-  pos_y: 6"#;
-	s
-}
+  pos_y: 6

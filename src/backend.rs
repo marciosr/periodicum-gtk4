@@ -53,6 +53,11 @@ pub fn carrega_dados () -> std::io::Result<String> {
 	Ok(file)
 }
 
+pub fn load_data (name: &str) -> std::io::Result<String> {
+	let file = fs::read_to_string(name)?;
+	Ok(file)
+}
+
 #[allow(dead_code)]
 pub fn salva_dados (serializado: String,
 								file_name: &str) -> std::io::Result<()> {

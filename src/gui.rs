@@ -1,130 +1,14 @@
 use crate::backend::*;
+
 use glib::clone;
 use gtk::prelude::*;
 use gtk::{Builder, Button, Label, Window, HeaderBar};
 use std::rc::Rc;
+use rust_embed::RustEmbed;
 
-pub const STYLE: &str = "
-/* Aplicável a todos os botões */
-button {
-				border-radius: 0;
-        border-width: 0;
-        background-image: none;
-}
-
-/* Não metais	 */
-button#nm {
-        background-image: none;
-        background-color: #aadc59;
-}
-
-button#nm:hover {
-        background-color: #73953e;
-}
-
-/* Metais alcalinos */
-button#ma {
-        background-image: none;
-        background-color: #f3c556;
-}
-
-button#ma:hover {
-        background-color: #9e7f34;
-}
-
-/* Metais alcalino-terrosos */
-button#mat {
-        background-image: none;
-        background-color: #ebe753;
-}
-
-button#mat:hover {
-        background-color: #989638;
-}
-/* Metais de transição */
-button#mt {
-        background-image: none;
-        background-color: #f3a0ab;
-}
-
-button#mt:hover {
-        background-color: #b2767e;
-}
-
-/* Semimetais */
-button#sm {
-        background-image: none;
-        background-color: #78c9b9;
-}
-
-button#sm:hover {
-        background-color: #5d9d90;
-}
-
-/* Outros metais */
-button#om {
-        background-image: none;
-        background-color: #a4cbd3;
-}
-
-button#om:hover {
-        background-color: #799499;
-}
-
-/* Halogênios */
-button#hg {
-        background-image: none;
-        background-color: #b2e4f5;
-}
-
-button#hg:hover {
-        background-color: #7fa7b5;
-}
-
-/* Gases nobres */
-button#gn {
-        background-image: none;
-        background-color: #79b1e2;
-}
-
-button#gn:hover {
-        background-color: #577fa3;
-}
-
-/* Lantanídeos */
-button#lt {
-        background-image: none;
-        background-color: #9ddfe0;
-}
-
-button#lt:hover {
-        background-color: #7cb1b2;
-}
-
-/* Actinídios */
-button#ac {
-        background-image: none;
-        background-color: #e5b3dd;
-}
-
-button#ac:hover {
-        background-color: #a17e9b;
-}
-
-label#symbol {
-	color: #000000;
-	font-size: 100%;
-}
-
-label#atomic_number {
-	color: #000000;
-	font-size: 60%;
-}
-
-label#atomic_weight {
-	color: #000000;
-	font-size: 60%;
-}";
+#[derive(RustEmbed)]
+#[folder = "data/ui"]
+struct Ui;
 
 pub struct ElementDialog {
 	pub dialog:											Window,
@@ -162,8 +46,8 @@ pub struct ElementDialog {
 impl ElementDialog {
 	pub fn new() -> Rc<Self> {
 
-		let glade_src = include_str!("dialog.ui");
-		let builder = Builder::from_string(glade_src);
+		string_from_resource!(glade_src, Ui, "dialog.ui");
+		let builder = Builder::from_string(&glade_src);
 
 		get_widget!(builder, Window, dialog);
 		get_widget!(builder, HeaderBar, headerbar);
@@ -217,7 +101,9 @@ impl ElementDialog {
 // Aqui não será necessário passar o vetor com os dados de todo os elementos,
 // apenas o item referente ao elemento atual vec[i]. É preciso ver se há
 // métodos especiais para fazer isso, ou se vai direto.
-	pub fn run (&self, element: &ElementData, window: &gtk::ApplicationWindow) {
+	pub fn run ( &self,
+							 element: &ElementData,
+							 window: &gtk::ApplicationWindow) {
 
 		println!("Dentro do run da implementação");
 		self.dialog.set_transient_for(Some(window));

@@ -1,6 +1,7 @@
 macro_rules! get_widget {
 	($builder:expr, $wtype:ty, $name:ident) => {
-		let $name: $wtype = $builder.get_object(stringify!($name)).expect(&format!("Could not find widget \"{}\"", stringify!($name)));
+		let $name: $wtype = $builder.get_object(stringify!($name))
+			.expect(&format!("Could not find widget \"{}\"", stringify!($name)));
 	};
 }
 
@@ -51,5 +52,17 @@ macro_rules! build_widget {
 macro_rules! wid {
 	($nome_button:expr) => {
 		$nome_button
+	};
+}
+/// O uso da macro é: string_from_resource(variaval, estrutura dos recursos, "nome do arquivo")
+macro_rules! string_from_resource {
+	($string_var_name:ident, $resource:ident, $file_name:expr) => {
+
+	let $string_var_name: String = String::from(
+		std::str::from_utf8(
+		$resource::get($file_name)
+		.unwrap()
+		.as_ref())
+		.unwrap());
 	};
 }
