@@ -11,6 +11,7 @@ use crate::gui::*;
 use crate::backend::*;
 use gtk::prelude::*;
 use gio::prelude::*;
+use glib::clone;
 use gtk::{Application, ApplicationWindow,Grid, Builder};
 use rust_embed::RustEmbed;
 
@@ -39,11 +40,9 @@ fn on_activate(application: &gtk::Application) {
 
 	build_ui(&grid, estrutura, &window);
 
-	let window_clone = window.clone();
-	window.connect_close_request(move |_| {
-		window_clone.destroy();
-		glib::signal::Inhibit(false)
-	});
+	window.connect_destroy(clone!(@weak window => move |_| {
+		window.destroy();
+	}));
 
 	for file in Asset::iter() {
       println!("{}", file.as_ref());
@@ -76,7 +75,14 @@ fn main() {
 		on_activate(app);
 	});
 
+	// let win = application.get_window_by_id(0).unwrap();
+
+	// win.connect_quit(clone!(@weak application => move |_|{
+	// 	application.quit();
+	// }));
+
 	application.run(&std::env::args().collect::<Vec<_>>());
+
 
 }
 

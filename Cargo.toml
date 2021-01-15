@@ -10,14 +10,14 @@ edition = "2018"
 git = "https://github.com/gtk-rs/gio"
 [dependencies.glib]
 git = "https://github.com/gtk-rs/glib"
-
+[dependencies.gtk]
+package = "gtk4"
+git = "https://github.com/gtk-rs/gtk4"
 [dependencies.gdk]
 package = "gdk4"
 git = "https://github.com/gtk-rs/gdk4"
 
-[dependencies.gtk]
-package = "gtk4"
-git = "https://github.com/gtk-rs/gtk4"
+
 
 [dependencies]
 serde = { version = "1.0", features = ["derive"] }
