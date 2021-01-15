@@ -75,12 +75,6 @@ fn main() {
 		on_activate(app);
 	});
 
-	// let win = application.get_window_by_id(0).unwrap();
-
-	// win.connect_quit(clone!(@weak application => move |_|{
-	// 	application.quit();
-	// }));
-
 	application.run(&std::env::args().collect::<Vec<_>>());
 
 
